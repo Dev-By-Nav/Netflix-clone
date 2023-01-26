@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Nav.css'
+import { BiCaretDown, BiSearch, BiBell } from 'react-icons/bi';
 
 function Nav() {
 const [show, handleShow] = useState(false);
@@ -26,6 +27,13 @@ return () => window.removeEventListener("scroll", transitionNavBar);
             alt="" 
             />
 
+            <h6 className="browse">Browse <BiCaretDown className='arrow'/></h6>
+
+            <div className='icons'>
+            <BiSearch size={20} className='search' /> 
+            < BiBell size={20} className='notification' />
+            </div>
+        
             <img 
             className='nav_avatar' 
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117" 
@@ -38,5 +46,3 @@ return () => window.removeEventListener("scroll", transitionNavBar);
 }
 
 export default Nav
-
-//01:07:20 Day 2
